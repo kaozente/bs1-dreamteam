@@ -93,5 +93,6 @@ Ermoeglicht parallele Ausfuehrung (besser fuer den User, kann mehrere Kerne nutz
 ### Linux/Unix
 
 * Shell
+* Linux-Kernel haben eine API zum Zugriff auf Resourcen im User-Mode, jedoch keine Kernel-Mode-Kernel-API (lol)
 * 
 
