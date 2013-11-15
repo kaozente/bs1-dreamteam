@@ -28,6 +28,17 @@
 
 ### Vor / Nachteile der Trennung von U/K
 
+# Vorteile:
+
+* Schutzkonzept: kritische Aufgaben dürfen nur im Kernel Mode durchgeführt werden
+* (Prozesserzeugung, Treiber ändern, etc.)
+* -> Crashes im Kernel Mode führen grundsätzlich zum Absturz
+* Usermode hat nur begrenzten Zugriff auf Ressourcen -> kein Konflikt im Hauptspeicher
+
+
+# Nachteile:
+
+* Trennung erfordert Zyklen zum Umschalten -> Rechner wird "langsamer" (Stichwort Interrupts)
 
 ## Aufgabe 1.2
 
