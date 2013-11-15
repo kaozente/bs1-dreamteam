@@ -72,6 +72,9 @@ Ermoeglicht parallele Ausfuehrung (besser fuer den User, kann mehrere Kerne nutz
 
 ### Task
 
+* Synonym für eine Aufgabe des Betriebssystems
+* Oft auch als mit dem begriff des Prozesses gleichgesetzt
+* Im Kontext eines Subprozesses kann ein Task auch einen Thread meinen
 
 ## Aufgabe 1.3
 
