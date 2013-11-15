@@ -44,6 +44,9 @@
 
 ### Programm
 
+* Abfolge von Befehlen in einer Programmiersprache
+* die Ausführung eines Programms erzwingt genau einen Prozess
+
 ### Prozess
 
 Repraesentiert die Instanz eines laufenden Programms
@@ -73,4 +76,17 @@ Ermoeglicht parallele Ausfuehrung (besser fuer den User, kann mehrere Kerne nutz
 ## Aufgabe 1.3
 
 ## Verzeichnisstruktur auf Kernel abbilden
+
+## Aufgabe 1.4
+
+### Windows
+
+* Windows NT übernimmt die Win16-API von OS/2
+* wurde ständig weiterentwickelt und ist heute unter WinAPI bekannt
+* cmd.exe
+
+### Linux/Unix
+
+* Shell
+* 
 
