@@ -66,6 +66,7 @@ Startet immer mit genau einem Thread (Main Methode)
 
 * Werden unabhaengig von ihrem Prozess gescheduled
 * Teilen sich den Adressraum ihres Prozesses
+* Hat eigenen Programm Counter
 
 Ermoeglicht parallele Ausfuehrung (besser fuer den User, kann mehrere Kerne nutzen) aber erhoeht Komplexitaet beim Programmieren (Synchronisation, zuviele Threads erzeugen Overhead durch zu viel Context Switching)
 
@@ -75,6 +76,7 @@ Ermoeglicht parallele Ausfuehrung (besser fuer den User, kann mehrere Kerne nutz
 * Synonym für eine Aufgabe des Betriebssystems
 * Oft auch als mit dem begriff des Prozesses gleichgesetzt
 * Im Kontext eines Subprozesses kann ein Task auch einen Thread meinen
+* Meist beschreibt ein Task eine Menge von Threads und ist daher mit dem Begriff Prozess gleichgesetzt
 
 ## Aufgabe 1.3
 
