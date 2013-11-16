@@ -7,7 +7,7 @@ __declspec(naked)
 
 NTSTATUS CallNtQueryInformationProcess(	
 	// vgl. WRK Docs
-	HANDLE Processhandle,
+	HANDLE ProcessHandle,
 	PROCESSINFOCLASS ProcessInformationClass,
 	PVOID ProccessInformation,
 	ULONG ProcessInformationenLength,
@@ -16,7 +16,7 @@ NTSTATUS CallNtQueryInformationProcess(
 {
 	
 	__asm {           
-		mov eax, 0x0086 // Windows XP SP2 //
+		mov eax, 0x009a // Windows XP SP3 x86 //
 		mov edx, 0x7FFE0300 /* KUSER_SHARED_DATA syscall stub */
 		call dword ptr [edx] /* call the stub code */
 
@@ -26,6 +26,30 @@ NTSTATUS CallNtQueryInformationProcess(
 
 int main(int argc, char *argv[])
 {
+	PROCESS_BASIC_INFORMATION pbi;
+	DWORD rueck;
+	DWORD fehler;
+	LPVOID lpMsgBuf;
 
-  return 0;
+	rueck = CallNtQueryInformationProcess(
+		GetCurrentProcess(),		// Process Handle
+		ProcessBasicInformation,	// Info Klasse
+		&pbi,						// pointer auf Info Objekt
+		sizeof(PROCESS_BASIC_INFORMATION), // groesse des objekts
+		NULL // groesser der rueckgabe (null, pbi wird in place geaendert)
+		);
+
+	if (rueck > 0)
+	{
+		printf("Fehler  %lx \n", rueck);
+
+	}
+	else
+	{
+		printf("syscall: %d  ", pbi.UniqueProcessId);
+		printf("usermode: %d  \n", GetCurrentProcessId() );
+	}
+	
+
+	return 0;
 }
