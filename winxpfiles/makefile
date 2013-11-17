@@ -2,7 +2,7 @@ all: 	syscall_winxp
 
 
 syscall_winxp:
-	gcc syscall_winxp.c -o getpid_xp
+	cl syscall_winxp.c /Fegetpid_xp.exe
 
 clean:
-	rm -f getpid_xp
+	rm -f getpid_xp.exe syscall_winxp.obj
